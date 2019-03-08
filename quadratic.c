@@ -19,8 +19,8 @@ void compute(float a,float b,float c,float *r1,float *r2,float *det)
 	}
 	if(*det<0)
 	{
-		*r1=-b/(2*a);
-		*r2=sqrt(-(*det)/(2*a));
+		*r1=-b/(2*a);//real part
+		*r2=sqrt(-(*det)/(2*a));//imaginary part
 	}
 }
 void output(float r1,float r2,float det)
