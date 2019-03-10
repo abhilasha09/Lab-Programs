@@ -14,8 +14,8 @@ int input(int m,int n,int a[m][n])
 }
 int compute(int m,int n,int a[m][n],int b[n][m])
 {
-  for(int c = 0; c < m; c++) // to iterate the rows
-        for(int d = 0; d < n; d++) //to iterate the columns
+  for(int c = 0; c < m; c++)
+        for(int d = 0; d < n; d++) 
             b[d][c] = a[c][d];
 }
 int display(int m,int n,int a[m][n],int b[n][m])
@@ -41,7 +41,7 @@ int display(int m,int n,int a[m][n],int b[n][m])
 }
 int output(int m,int n,int a[m][n],int b[n][m])
 {
-    int flag;flag=0;
+    int flag;flag=1;
     if(m==n)
     {
         for(int i=0;i<m;i++)
