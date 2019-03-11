@@ -23,7 +23,7 @@ int input(int m,int n,int p,int q,int a[m][n],int b[p][q])
 }
 int compute(int m,int n,int p,int q,int a[m][n],int b[p][q],int res[m][q])
 {
-	int i,j,k,sum;
+	int i,j,k;int sum;sum=0;
 	for(i=0;i<m;i++)
 	{
 		for(j=0;j<q;j++)
@@ -32,9 +32,11 @@ int compute(int m,int n,int p,int q,int a[m][n],int b[p][q],int res[m][q])
 			{
 			sum+=(a[i][k])*(b[k][j]);
 			res[i][j]=sum;
+			
 			}
+		sum=0;
 		}
-	sum=0;
+	
 	}
 
 
@@ -60,15 +62,15 @@ void output(int m,int n,int p,int q,int res[m][q])
 }
 void main()
 {
-int m,n,p,q;
-printf("Enter the order of the Matrix 1\n");
-scanf("%d%d",&m,&n);
-printf("Enter the order of the Matrix 2\n");
-scanf("%d%d",&p,&q);
-int a[m][n];int b[p][q];int res[m][q];
-input(m,n,p,q,a,b);
-compute(m,n,p,q,a,b,res);
-output(m,n,p,q,res);
+	int m,n,p,q;
+	printf("Enter the order of the Matrix 1\n");
+	scanf("%d%d",&m,&n);
+	printf("Enter the order of the Matrix 2\n");
+	scanf("%d%d",&p,&q);
+	int a[m][n];int b[p][q];int res[m][q];
+	input(m,n,p,q,a,b);
+	compute(m,n,p,q,a,b,res);
+	output(m,n,p,q,res);
 }
 
 
