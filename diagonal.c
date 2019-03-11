@@ -22,9 +22,8 @@ int compute(int m,int n,int a[m][n],int b[])
                 if(c==d)
                 {
                     int i=a[c][d];
-                    int b[m];
                     b[f]=i;
-                    ++f;
+                    f++;
                 }
                 
             }
@@ -37,8 +36,10 @@ int display(int m,int n,int f,int b[])
     {
         printf("The diagonal elements are\n");
         for(int i=0;i<f;i++)
+	{
         printf("%d",b[i]);
         printf("\n");
+	}
     }
     else
     printf("A rectangular matrix can't have diagonal");
