@@ -1,13 +1,12 @@
-
 #include <stdio.h>
-void input(int *h,char *ch)
+void get_data(int *h,char *ch)
 {
     printf("Enter c for car, t for tempo,b for bus");
     scanf("%c",ch);
     printf("Enter the number of hours you would like to park the vehicle");
     scanf("%d",h);
 }
-int fare(int h,char ch)
+int get_fare(int h,char ch)
 {
     int f;
     switch(ch)
@@ -35,7 +34,7 @@ int fare(int h,char ch)
         break;
     }
 }
-void output(int f)
+void display_fare(int f)
 {
     printf("Your fare is %d\n Thanks for parking here ;)",f);
 }
@@ -43,7 +42,7 @@ void main()
 {
     int h,f;
     char ch;
-    input(&h,&ch);
-    f=fare(h,ch);
-    output(f);
+    get_data(&h,&ch);
+    f=get_fare(h,ch);
+    display_fare(f);
 }
