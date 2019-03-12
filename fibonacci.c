@@ -1,5 +1,5 @@
 #include<stdio.h>
-void input(int *n)
+void get_n(int *n)
 {
     printf("Enter the number of elements");
     scanf("%d",n);
@@ -13,7 +13,7 @@ int fibonacci(int n,int a[])
         a[i]=a[i-1]+a[i-2];
     }
 }
-void display(int a[],int n)
+void display_series(int a[],int n)
 {
     printf("The fibonacci series is\n");
     for(int i=0;i<n;i++)
@@ -22,8 +22,8 @@ void display(int a[],int n)
 void main()
 {
     int n;
-    input(&n);
+    get_n(&n);
     int a[n];
     fibonacci(n,a[]);
-    display(a,n);
+    display_series(a,n);
 }
