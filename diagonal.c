@@ -1,5 +1,5 @@
 #include<stdio.h>
-int input(int m,int n,int a[m][n])
+int get_matrix(int m,int n,int a[m][n])
 {
     
     printf("Enter the elements");
@@ -12,7 +12,7 @@ int input(int m,int n,int a[m][n])
         }
     }
 }
-int compute(int m,int n,int a[m][n],int b[])
+int get_diagonal(int m,int n,int a[m][n],int b[])
 {
   int f=0;
   for(int c = 0; c < m; c++)
@@ -30,7 +30,7 @@ int compute(int m,int n,int a[m][n],int b[])
     }
   return f;  
 }
-int display(int m,int n,int f,int b[])
+int display_diagonal(int m,int n,int f,int b[])
 {
     if(m==n)
     {
@@ -50,8 +50,8 @@ void main()
     printf("Enter order");
     scanf("%d%d",&m,&n);
     int a[m][n];
-    input(m,n,a);
+    get_matrix(m,n,a);
     int b[m];
-    int f=compute(m,n,a,b);
-    display(m,n,f,b);
+    int f=get_diagonal(m,n,a,b);
+    display_diagonal(m,n,f,b);
 }
