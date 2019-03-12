@@ -1,10 +1,10 @@
 #include<stdio.h>
-void input(int *n)
+void get_rows(int *n)
 {
 	printf("Enter no.of rows");
 	scanf("%d",n);
 }
-void output(int n)
+void display_pattern(int n)
 {
 	int i,j;
 	for(i=0;i<=n;i++)
@@ -19,6 +19,6 @@ void output(int n)
 int main()
 {
 	int n;
-	input(&n);
-	output(n);
+	get_rows(&n);
+	display_pattern(n);
 }
