@@ -1,5 +1,5 @@
 #include<stdio.h>
-void input(int *n)
+void get_number(int *n)
 {
     printf("Enter your number");
     scanf("%d",n);
@@ -17,7 +17,7 @@ int armstrong(int n)
     }
     return new;
 }
-void output(int n,int new)
+void display(int n,int new)
 {
     if(n=new)
     printf("The given number is armstrong");
@@ -27,7 +27,7 @@ void output(int n,int new)
 void main()
 {
     int new,n;
-    input(&n);
+    get_number(&n);
     new=armstrong(n);
-    output(n,new);
+    display(n,new);
 }
