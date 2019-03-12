@@ -1,5 +1,5 @@
 #include<stdio.h>
-int input(int *n)
+void get_n(int *n)
 {
 	printf("Enter the number");
 	scanf("%d",n);
@@ -15,7 +15,7 @@ int reverse(int n)
 	}
 	return rev;
 }
-int palindrome(int n,int rev)
+void palindrome(int n,int rev)
 {
 	if(n==rev)
 	printf("The given number %d is palindrome",n);
@@ -25,7 +25,7 @@ int palindrome(int n,int rev)
 void main()
 {
 	int n,rev;
-	input(&n);
+	get_n(&n);
 	rev=reverse(n);
 	palindrome(n,rev);
 }
