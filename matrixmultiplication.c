@@ -1,5 +1,5 @@
 #include<stdio.h>
-int input(int m,int n,int p,int q,int a[m][n],int b[p][q])
+int get_matrix(int m,int n,int p,int q,int a[m][n],int b[p][q])
 {
 	int i,j;
 	printf("Enter matrix 1\n");
@@ -21,7 +21,7 @@ int input(int m,int n,int p,int q,int a[m][n],int b[p][q])
 		}
 	}	
 }
-int compute(int m,int n,int p,int q,int a[m][n],int b[p][q],int res[m][q])
+int productofmatrices(int m,int n,int p,int q,int a[m][n],int b[p][q],int res[m][q])
 {
 	int i,j,k;int sum;sum=0;
 	for(i=0;i<m;i++)
@@ -42,7 +42,7 @@ int compute(int m,int n,int p,int q,int a[m][n],int b[p][q],int res[m][q])
 
 	
 }
-void output(int m,int n,int p,int q,int res[m][q])
+void displayproduct(int m,int n,int p,int q,int res[m][q])
 {
 	if(n!=p)
 	{
@@ -68,9 +68,9 @@ void main()
 	printf("Enter the order of the Matrix 2\n");
 	scanf("%d%d",&p,&q);
 	int a[m][n];int b[p][q];int res[m][q];
-	input(m,n,p,q,a,b);
-	compute(m,n,p,q,a,b,res);
-	output(m,n,p,q,res);
+	get_matrix(m,n,p,q,a,b);
+	productofmatrices(m,n,p,q,a,b,res);
+	displayproduct(m,n,p,q,res);
 }
 
 
