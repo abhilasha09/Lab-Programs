@@ -29,7 +29,7 @@ void sort(int n,int a[])
 }
 int search(int n,int a[],int num,int *first,int *last)
 {
-	int mid,pos;
+	int mid,position;
 	*first=0;
 	*last=n-1;
 	mid=(*first+ *last)/2;
@@ -41,28 +41,28 @@ int search(int n,int a[],int num,int *first,int *last)
 		*last=mid-1;
 		if(a[mid]==num)
 		{
-		pos=mid+1;
+		position=mid+1;
 		break;
 		}
 		mid=(*first+ *last)/2;
 	}
-	return pos;
+	return position;
 }
-void output(int num,int first,int last,int pos)
+void display_position(int num,int first,int last,int position)
 {
 	if(first>last)
 	printf("The element does not exist");
 	else
-	printf("The element %d is at position %d",num,pos);
+	printf("The element %d is at position %d",num,position);
 }
 void main()
 {
-	int n,num,pos,first,last;
+	int n,num,position,first,last;
 	printf("Enter the no.of.elements");
 	scanf("%d",&n);
 	int a[n];
 	input(n,a,&num);
 	sort(n,a);
 	pos=search(n,a,num,&first,&last);
-	output(num,first,last,pos);
+	display_position(num,first,last,position);
 }
