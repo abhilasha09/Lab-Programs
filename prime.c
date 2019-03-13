@@ -1,34 +1,44 @@
-
 #include<stdio.h>
-void input(int *n)
+int input_range()
 {
-    printf("Enter the n");
-    scanf("%d",n);
+int n;
+printf("Enter the number of prime numbers to be generated\n");
+scanf("%d",&n);
+return n;
 }
-int prime(int n,int a[])
+
+void prime(int n,int a[])
 {
-    int m;m=0;
-    for(int i=2;i<=n;i++)
-    {
-        if((i%2!=0)&&(i%3!=0)&&(i%5!=0)&&(i%7!=0))
-        {
-        a[m]=i;
-        m++;
-        }
-    }
-    return m;
+int i=2,x=0;
+while(n>0)
+{
+if(i%2==0||i%3==0||i%5==0)
+{
+i++;
 }
-void output(int a[],int m)
+else
 {
-    printf("The prime numbers are 2\n3\n5\n7\n");
-    for(int i=0;i<m;i++)
-    printf("%d\n",a[i]);
+a[x]=i;
+i++;
+n--;
+x++;
 }
-void main()
+
+}
+}
+void output(int b[],int n)
 {
-    int n,m;
-    input(&n);
-    int a[n];
-    m=prime(n,a);
-    output(a,m);
+for(int i=0;i<n;i++)
+{
+printf("%d\n",b[i]);
+}
+}
+int main()
+{
+int x;
+x=input_range();
+int a[x];
+prime(x,a);
+output(a,x);
+return 0;
 }
