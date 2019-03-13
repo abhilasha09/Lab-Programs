@@ -1,5 +1,5 @@
 #include<stdio.h>
-int input(int n,int a[])
+int get_array(int n,int a[])
 {
     printf("Enter the elements");
     for(int i=0;i<n;i++)
@@ -26,7 +26,7 @@ int sort(int n,int a[])
      swap(&a[min],&a[i]); 
     } 
 } 
-int output(int n,int a[])
+int display(int n,int a[])
 {
     printf("The minimum number=%d",a[0]);
     printf("The maximum number=%d",a[n-1]);
@@ -38,7 +38,7 @@ int main()
     printf("Enter n");
     scanf("%d",&n);
     int a[n];
-    input(n,a);
+    get_array(n,a);
     sort(n,a);
-    output(n,a);
+    display(n,a);
 }
