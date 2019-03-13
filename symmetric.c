@@ -1,5 +1,5 @@
 #include<stdio.h>
-int input(int m,int n,int a[m][n])
+int get_matrix(int m,int n,int a[m][n])
 {
     
     printf("Enter the elements");
@@ -12,7 +12,7 @@ int input(int m,int n,int a[m][n])
         }
     }
 }
-int compute(int m,int n,int a[m][n],int b[n][m])
+int transpose_matrix(int m,int n,int a[m][n],int b[n][m])
 {
   for(int c = 0; c < m; c++)
         for(int d = 0; d < n; d++) 
@@ -39,7 +39,7 @@ int display(int m,int n,int a[m][n],int b[n][m])
         printf("\n");
     }
 }
-int output(int m,int n,int a[m][n],int b[n][m])
+int check_matrices(int m,int n,int a[m][n],int b[n][m])
 {
     int flag;flag=1;
     if(m==n)
@@ -76,8 +76,8 @@ void main()
     printf("Enter the order of the square matrix");
     scanf("%d%d",&m,&n);
     int a[m][n];int b[n][m];
-    input(m,n,a);
-    compute(m,n,a,b);
+    get_matrix(m,n,a);
+    transpose_matrix(m,n,a,b);
     display(m,n,a,b);
-    output(m,n,a,b);
+    check_matrices(m,n,a,b);
 }
