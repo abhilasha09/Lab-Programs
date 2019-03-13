@@ -22,7 +22,7 @@ int details(struct student a[],int n)
 		scanf("%s",a[i].grade);
 	}
 }
-void input(int *r)
+void get_rno(int *r)
 {
 	printf("Enter the roll no of the student details you want");
 	scanf("%d",r);
@@ -41,6 +41,6 @@ void main()
 	scanf("%d",&n);
 	struct student a[n];
 	details(a,n);
-	input(&r);
+	get_rno(&r);
 	display(r,a);
 }
